@@ -1,7 +1,7 @@
 <template lang="html">
 
   <section class="header">
-    <h1>header Component</h1>
+    <h1>Header Component</h1>
   </section>
 
 </template>
@@ -9,7 +9,7 @@
 <script lang="js">
 
   export default  {
-    name: 'header',
+    name: 'headerComponent',
     props: [],
     mounted () {
 

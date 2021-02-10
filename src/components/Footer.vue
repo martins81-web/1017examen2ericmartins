@@ -1,7 +1,7 @@
 <template lang="html">
 
   <section class="footer">
-    <h1>footer Component</h1>
+    <h1>Footer Component</h1>
   </section>
 
 </template>
@@ -9,7 +9,7 @@
 <script lang="js">
 
   export default  {
-    name: 'footer',
+    name: 'footerComponent',
     props: [],
     mounted () {
 
