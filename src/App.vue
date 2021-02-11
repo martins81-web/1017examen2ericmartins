@@ -16,6 +16,8 @@
           </p>
         </div>
     </Accueil>
+        <Contact/>
+
     <Footer/>
   </div>
 </template>
@@ -25,6 +27,7 @@ import Accueil from './views/Accueil.vue'
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 import Profile from './views/Profile.vue'
+import Contact from './views/Contact.vue'
 
 export default {
   name: 'App',
@@ -37,7 +40,8 @@ export default {
     Accueil,
     Header,
     Footer,
-    Profile
+    Profile,
+    Contact
   },
   created() {
       let loggedIn = false;
