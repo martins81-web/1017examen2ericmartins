@@ -10,8 +10,11 @@
 <script>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import   {mixinTranslations}  from "./mixins/mixinTranslations";
 
 export default {
+  mixins: [mixinTranslations],
+
   name: 'App',
   data () {
       return {

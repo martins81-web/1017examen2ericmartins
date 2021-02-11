@@ -2,13 +2,9 @@
 
   <section class="header">
     <ul>
-      <div v-for="item in menu" :key="item.id+item.name">
-        <li v-if="item.name==='About'" style="float:right">        
-          <router-link class="link" :to="{path:item.name}"  tag="li">{{item.name}}</router-link>
-        </li>  
-        <li v-else>        
-          <router-link class="link" :to="{path:item.name}" tag="li">{{item.name}}</router-link>
-        </li>  
+      <div v-for="item in menu" :key="item.id+item.name">   
+          <router-link v-if="item.name==='about'" style="float:right" class="link" :to="{path:item.name}"  tag="li">{{item.name | translateTo(language)}}</router-link>
+          <router-link v-else class="link" :to="{path:item.name}" tag="li">{{item.name | translateTo(language)}}</router-link>
       </div>   
     </ul>
   </section>
@@ -16,8 +12,10 @@
 </template>
 
 <script lang="js">
+import   {mixinTranslations}  from "../mixins/mixinTranslations";
 
-  export default  {
+export default {
+    mixins: [mixinTranslations],
     name: 'headerComponent',
     props: [],
     mounted () {
@@ -26,10 +24,10 @@
     data () {
       return {
         menu: [
-              {id:1, name: 'Accueil'},
-              {id:2, name: 'Projets'},
-              {id:3, name: 'Contact'},
-               {id:4, name: 'About'}
+              {id:1, name: 'home'},
+              {id:2, name: 'projects'},
+              {id:3, name: 'contact'},
+              {id:4, name: 'about'}
         ]
       }
     },
@@ -71,7 +69,7 @@ li, .link{
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 24px 28px;
   text-decoration: none;
 }
 
@@ -82,4 +80,6 @@ li, .link{
    background-color: #4CAF50;
    cursor: pointer;
  }
+
+
 </style>

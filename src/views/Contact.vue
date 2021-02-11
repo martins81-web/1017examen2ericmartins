@@ -1,24 +1,24 @@
 <template lang="html">
 
   <section class="contact">
-    <h1>Contact</h1>
+    <h1>{{'contact' | translateTo(language)}}</h1>
     <form class="form">
       <div  class='item'>
-        <label>Nom </label>
-        <input type="text" name="lastname" placeholder="Nom" />
+        <label> {{'lastName' | translateTo(language)}} </label>
+        <input type="text" name="lastname"  />
       </div>
       <div  class='item'>
-        <label>Prénom </label>
-        <input type="text" name="firstname" placeholder="Prénom" />
+        <label>{{'firstName' | translateTo(language)}} </label>
+        <input type="text" name="firstname"  />
       </div>
       <div  class='item'>
-        <label>Courriel </label>
-        <input type="text" name="email" placeholder="Courriel" />
+        <label>{{'email' | translateTo(language)}} </label>
+        <input type="text" name="email"  />
       </div>
       <div  class='item'>
-        <label>Raison du contact </label>
+        <label>{{'reasonOfContact' | translateTo(language)}} </label>
         <select class="sel" name="categorie">
-            <option v-for="(option, i) in dropdownOptions" :key="i"> {{ option }}</option>
+            <option v-for="(option, i) in dropdownOptions" :key="i"> {{ option | translateTo(language) }}</option>
         </select>
       </div>
     </form>
@@ -27,8 +27,10 @@
 </template>
 
 <script lang="js">
+import   {mixinTranslations}  from "../mixins/mixinTranslations";
 
-  export default  {
+export default {
+    mixins: [mixinTranslations],
     name: 'contact',
     props: [],
     mounted () {
@@ -37,12 +39,12 @@
     data () {
       return {
           dropdownOptions: [
-              "Emploi",
-              "Informations",
-              "Projet",
-              "Prise de rendez-vous",
-              "Autre"
-          ]
+              "job",
+              "informations",
+              "project",
+              "appointment",
+              "other"
+          ],
       }
     },
     methods: {
