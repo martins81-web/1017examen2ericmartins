@@ -1,7 +1,7 @@
 <template lang="html">
 
   <section class="footer">
-    <h1>Footer Component</h1>
+    <div v-mydirective> - Eric Martins </div>
   </section>
 
 </template>
@@ -11,6 +11,14 @@
   export default  {
     name: 'footerComponent',
     props: [],
+    //directive bas de page
+    directives: {
+      mydirective: {
+       bind: function(el) {
+         el.innerHTML = 'Copyright © ' + new Date().getFullYear() ;
+         el.style.color = 'white';
+      },
+    },
     mounted () {
 
     },
@@ -26,12 +34,16 @@
 
     }
 }
+}
 
 
 </script>
 
 <style scoped >
   .footer {
-
+    background-color: #333;
+    color: 'white';
+    padding: 24px 28px;
+    margin-top: 24px;
   }
 </style>
