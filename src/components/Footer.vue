@@ -15,7 +15,7 @@
     directives: {
       mydirective: {
        bind: function(el) {
-         el.innerHTML = 'Copyright © ' + new Date().getFullYear() ;
+         el.innerHTML = 'Copyright © ' + new Date().getFullYear() + el.innerHTML ;
          el.style.color = 'white';
       },
     },

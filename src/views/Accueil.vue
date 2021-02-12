@@ -1,4 +1,3 @@
-import { ListeForfaitsComponent } from '../../../App-voyages/src/app/liste-forfaits/liste-forfaits.component';
 <template lang="html">
 
   <section class="accueil">
