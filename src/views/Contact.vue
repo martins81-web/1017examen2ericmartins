@@ -18,6 +18,7 @@
       <div  class='item'>
         <label>{{'reasonOfContact' | translateTo(language)}} </label>
         <select class="sel" name="categorie">
+        <!-- cycle for pour l'affichage des options dans le menu select -->
             <option v-for="(option, i) in dropdownOptions" :key="i"> {{ option | translateTo(language) }}</option>
         </select>
       </div>
@@ -38,6 +39,7 @@ export default {
     },
     data () {
       return {
+        //Array avec les options de type de contact
           dropdownOptions: [
               "job",
               "informations",

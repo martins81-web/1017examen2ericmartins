@@ -2,9 +2,10 @@ export const mixinTranslations = {
     data () {
         return {
             //CHANGE LANGUAGE ***french or english***
-           language: "french"
+           language: "fr"
         }
       },
+      //Traductions anglaises
     en: {
       firstName: "Firstname",
       age: "Age",
@@ -38,6 +39,7 @@ export const mixinTranslations = {
       formation3: "Electronics and Computer Engineering - Automation - University of Porto, Portugal",
       formation31: "* Comparative evaluation issued by the MICC: College diploma in general education, Undergraduate university studies - one year completed - pure and applied science sector"
     },
+    //traduction françaises
     fr: {
       firstName: "Prénom",
       age: "Age",
@@ -72,10 +74,20 @@ export const mixinTranslations = {
       formation31: "*Évaluation comparative délivrée par le MICC : Diplôme d’études collégiales en formation générale, Études universitaires de premier cycle — une année complétée — secteur des sciences pures et appliquées"
 
     }, 
-    
+    /* filtre qui verifie si une traduction existe et qui retourne son valeur*/
     filters :{
         translateTo: function (value, language) {
-            if (language==='english'){
+        if (!value) return '';
+          let data = mixinTranslations;
+          let locale = language;
+          value = value.toString();
+          if (data[locale][value]) {
+              return data[locale][value];
+          }
+          else {
+              return value;
+          }
+           /*  if (language==='english'){
                 let keys= Object.keys(mixinTranslations.en);        
                 for(let i=0; i<keys.length; i++){
                     if (keys[i]===value){
@@ -89,7 +101,7 @@ export const mixinTranslations = {
                         return mixinTranslations.fr[value]
                     }
                 }    
-            }
+            } */
         },
       
     }

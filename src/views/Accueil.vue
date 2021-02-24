@@ -1,6 +1,7 @@
 <template lang="html">
 
   <section class="accueil">
+  <!-- Utilisation du filtre translateTo(...) du mixinTranslations qui permets de traduire du texte -->
     <h1 v-if="!showProfile"> {{"home" | translateTo(language)}}</h1>
 
     <Profile v-if="showProfile" name='profile'/>

@@ -1,6 +1,7 @@
 <template lang="html">
 
   <section class="footer">
+  <!-- Appel de la directive  -->
     <div v-mydirective> - Eric Martins </div>
   </section>
 

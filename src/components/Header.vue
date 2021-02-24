@@ -2,7 +2,10 @@
 
   <section class="header">
     <ul>
+    <!-- Cycle for qui parcours et affiche les options du navbar -->
       <div v-for="item in menu" :key="item.id+item.name">   
+      <!-- La class link et la tag="li" permettent d'utiliser les classes 
+      router-link-active et router-link-exact-active pour donner un look différent à option du menu qui est active-->
           <router-link v-if="item.name==='about'" style="float:right" class="link" :to="{path:item.name}"  tag="li">{{item.name | translateTo(language)}}</router-link>
           <router-link v-else class="link" :to="{path:item.name}" tag="li">{{item.name | translateTo(language)}}</router-link>
       </div>   
@@ -23,6 +26,7 @@ export default {
     },
     data () {
       return {
+        //array d'objets avec les options de menu du navBar
         menu: [
               {id:1, name: 'home'},
               {id:2, name: 'projects'},

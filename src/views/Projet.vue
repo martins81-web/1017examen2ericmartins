@@ -4,6 +4,7 @@
     <h1> {{"myProjects" | translateTo(language)}}</h1>
 
      <ul class='projets'>
+     <!--Cycle for pour afficher les projets-->
         <li v-for="(projet, i) in projets" :key="i"> <a :href="projet.link" target="_blank"> {{ projet.name | translateTo(language)}}</a> </li>
     </ul>
   </section>
@@ -18,6 +19,7 @@ export default {
     name: 'projet',
     data() {
       return {
+        //Array d'objets qui contient le nom du projet et son respective lien
           projets: [
               {name:"visitPortugal",link:"https://martins81-web.github.io/AEC_Front_End/Integration1/Projet%20final/"},
               {name:"chuckNorrisJokes",link:"https://martins81-web.github.io/AEC_Front_End/Programmation2React/chuck-norris/build/"},

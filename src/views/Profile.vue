@@ -1,3 +1,4 @@
+<!-- Component Profile qui s'affiche lors que l'utilisateur est loggué -->
 <template lang="html">
 
   <section class="profile">
@@ -6,6 +7,7 @@
     <div class="post-container"> 
     <div class="post-thumb"><img src="../assets/eric.jpg" height="300px"/></div>
     <div class="post-content">
+    <!--Présentation du profil-->
       <div class="presentation">
         <p>{{'presentation1' | translateTo(language)}}</p>
         <p>{{'presentation2' | translateTo(language)}}</p>       
@@ -14,6 +16,7 @@
     </div>
     </div>
     <div class="post-container ">
+    <!--Formations-->
       <h2>{{ "studies" | translateTo(language)}}</h2>
         <div class="formations">
           <ul>
@@ -25,11 +28,12 @@
           </ul>
         </div>
     </div>
-
+    <!--Compétences-->
     <div class="post-container ">
       <h2> {{ "skills" | translateTo(language)}}</h2>
         <div class="formations">
           <ul>
+          <!-- Cycle for pour afficher les cométences -->
             <li v-for="competence in competences" :key="competence">{{competence}}</li>
           </ul>
         </div>
@@ -50,8 +54,9 @@ export default {
 
     },
     data () {
+      // Array de string qui contient les compétences
       return {
-          competences:[ "HTML5", "CSS3/SASS", "BootStrap", "javaScript", "jQuery", "typeScript", "React-js", "Angular", "Vue"]
+          competences:[ "HTML5", "CSS3/SASS", "BootStrap", "javaScript", "jQuery", "typeScript", "React-js", "Angular", "Vue", "Flutter"]
       }
     },
     methods: {
