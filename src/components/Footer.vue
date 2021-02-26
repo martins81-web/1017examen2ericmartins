@@ -2,7 +2,10 @@
 
   <section class="footer">
   <!-- Appel de la directive  -->
-    <div v-mydirective> - {{nom}}  </div>
+    <div v-mydirective> - {{nom}}  - 
+    <a href="https://raw.githubusercontent.com/martins81-web/1017examen2ericmartins/master/LICENSE" target="_blank">LICENSE</a>
+
+</div>
  
   </section>
 
@@ -48,4 +51,13 @@
     padding: 24px 28px;
     margin-top: 24px;
   }
+  .a{
+    color: white;
+  }
+  a:active {
+    color: white;
+}
+a:visited {
+    color:white;
+}
 </style>

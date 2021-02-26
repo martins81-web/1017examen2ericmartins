@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 
 import Accueil from '../views/Accueil.vue';
 import Contact from '../views/Contact.vue';
+import License from '../views/License.vue';
 import Projet from '../views/Projet.vue';
 
 Vue.use(VueRouter);
@@ -27,6 +28,11 @@ const routes = [
     path: '/contact',
     name: 'contact',
     component: Contact
+  },
+  {
+    path: "/licence",
+    name: "Licence",
+    component: License
   },
   {
     path: '/about',
