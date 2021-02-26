@@ -6,8 +6,8 @@
       <div v-for="item in menu" :key="item.id+item.name">   
       <!-- La class link et la tag="li" permettent d'utiliser les classes 
       router-link-active et router-link-exact-active pour donner un look différent à option du menu qui est active-->
-          <router-link v-if="item.name==='about'" style="float:right" class="link" :to="{path:item.name}"  tag="li">{{item.name | translateTo(language)}}</router-link>
-          <router-link v-else class="link" :to="{path:item.name}" tag="li">{{item.name | translateTo(language)}}</router-link>
+          <router-link name="{item.name}" v-if="item.name==='about'" style="float:right" class="link" :to="{path:item.name}"  tag="li">{{item.name | translateTo(language)}}</router-link>
+          <router-link name="{item.name}" v-else class="link" :to="{path:item.name}" tag="li">{{item.name | translateTo(language)}}</router-link>
       </div>   
     </ul>
   </section>

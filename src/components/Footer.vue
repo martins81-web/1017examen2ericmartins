@@ -2,7 +2,8 @@
 
   <section class="footer">
   <!-- Appel de la directive  -->
-    <div v-mydirective> - Eric Martins </div>
+    <div v-mydirective> - {{nom}}  </div>
+ 
   </section>
 
 </template>
@@ -12,6 +13,11 @@
   export default  {
     name: 'footerComponent',
     props: [],
+    data () {
+      return {
+        nom: "Eric Martins"
+      }
+    },
     //directive bas de page
     directives: {
       mydirective: {
@@ -22,11 +28,6 @@
     },
     mounted () {
 
-    },
-    data () {
-      return {
-
-      }
     },
     methods: {
 

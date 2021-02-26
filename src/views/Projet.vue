@@ -3,9 +3,11 @@
   <section class="projet">
     <h1> {{"myProjects" | translateTo(language)}}</h1>
 
-     <ul class='projets'>
+     <ul class='projets' id="projets">
      <!--Cycle for pour afficher les projets-->
-        <li v-for="(projet, i) in projets" :key="i"> <a :href="projet.link" target="_blank"> {{ projet.name | translateTo(language)}}</a> </li>
+        <li  v-for="(projet, i) in projets" :key="i"> 
+          <a :id="projet.name" :href="projet.link" target="_blank"> {{ projet.name | translateTo(language)}}</a> 
+        </li>
     </ul>
   </section>
 

@@ -17,7 +17,7 @@
       </div>
       <div  class='item'>
         <label>{{'reasonOfContact' | translateTo(language)}} </label>
-        <select class="sel" name="categorie">
+        <select class="sel" name="categorie" id="selectContactType">
         <!-- cycle for pour l'affichage des options dans le menu select -->
             <option v-for="(option, i) in dropdownOptions" :key="i"> {{ option | translateTo(language) }}</option>
         </select>
