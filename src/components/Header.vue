@@ -1,6 +1,8 @@
 <template lang="html">
 
   <section class="header">
+   <div id='account-info'>
+ </div>
     <ul>
     <!-- Cycle for qui parcours et affiche les options du navbar -->
       <div v-for="item in menu" :key="item.id+item.name">   
@@ -9,18 +11,18 @@
           <router-link name="{item.name}" v-if="item.name==='about'" style="float:right" class="link" :to="{path:item.name}"  tag="li">{{item.name | translateTo(language)}}</router-link>
           <router-link name="{item.name}" v-else class="link" :to="{path:item.name}" tag="li">{{item.name | translateTo(language)}}</router-link>
       </div>   
+
+      
     </ul>
   </section>
 
 </template>
 
 <script lang="js">
-import   {mixinTranslations}  from "../mixins/mixinTranslations";
 
 export default {
-    mixins: [mixinTranslations],
     name: 'headerComponent',
-    props: [],
+    props: [    ],
     mounted () {
 
     },
@@ -32,12 +34,12 @@ export default {
               {id:2, name: 'projects'},
               {id:3, name: 'contact'},
               {id:4, name: 'about'}
-        ]
+        ], 
       }
     },
     methods: {
-
-    },
+    
+  },
     computed: {
 
     }

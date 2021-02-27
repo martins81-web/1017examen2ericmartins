@@ -28,10 +28,8 @@
 </template>
 
 <script lang="js">
-import   {mixinTranslations}  from "../mixins/mixinTranslations";
 
 export default {
-    mixins: [mixinTranslations],
     name: 'contact',
     props: [],
     mounted () {

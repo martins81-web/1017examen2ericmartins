@@ -1,8 +1,8 @@
 export const mixinTranslations = {
+
     data () {
         return {
-            //CHANGE LANGUAGE ***french or english***
-           language: "fr"
+           language: this.language
         }
       },
       //Traductions anglaises

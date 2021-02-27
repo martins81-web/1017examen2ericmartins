@@ -1,8 +1,12 @@
 # 1017examen2ericmartins
+<hr/>;
+Description
+<hr/>;
 
-## Commande Question 1
+Ce projet a été réalisé avec le Framework Vue2. Il s'agit d'un site personnel, un porfolio. 
 
-```
-vue create 1017examen2ericmartins
-```
+C'est un projet qui a comme objectif l'aprentissage du framework mentionné, faisant partie
+du plan d'apprentissage du AEC en Dévelopment Front-end du Cégep Trois-Rivières et plus en 
+particulier, du cours Intégration d'interface utilisateur.
 
+<hr/>;
