@@ -1,6 +1,6 @@
 # 1017examen2ericmartins
 <hr/>
-****Description**
+**Description**
 <hr/>
 
 Ce projet a été réalisé avec le Framework Vue2. Il s'agit d'un site personnel, un porfolio. 
