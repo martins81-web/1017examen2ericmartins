@@ -10,10 +10,10 @@ particulier, du cours Intégration d'interface utilisateur.
 
 ## BESOINS FONCTIONNELS
 
-Les besoins fonctionnels se trouve dans le ficher BESOINS_FONCTIONNELS.md
-[Besoins fonctionnels](https://github.com/martins81-web/1017examen2ericmartins/blob/master/BESOINS_FONCTIONNELS.md)
+Les besoins fonctionnels se trouve dans le ficher 
+[Besoins fonctionnels](https://github.com/martins81-web/1017examen2ericmartins/blob/master/BESOINS_FONCTIONNELS.md).
 
 ## LICENSE
 
-La license se trouve dans le ficher LICENSE
-[License](https://github.com/martins81-web/1017examen2ericmartins/blob/master/LICENSE)
+La license se trouve dans le ficher
+[License](https://github.com/martins81-web/1017examen2ericmartins/blob/master/LICENSE).
