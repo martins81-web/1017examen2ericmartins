@@ -6,6 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state:{
         showProfile: false,
+        //CHANGE LA LANGUE par défaut du site ***français (fr) ou anglais (en)***
         language: 'fr' 
     },
     mutations:{

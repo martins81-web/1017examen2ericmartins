@@ -3,7 +3,9 @@
   <section class="accueil">
 
   <!-- Utilisation du filtre translateTo(...) du mixinTranslations qui permets de traduire du texte -->
-    <h1 v-if="!this.$store.getters.getCurrentConnection"> {{"home" | translateTo(this.$store.getters.getCurrentLanguage)}}</h1>
+    <h1 v-if="!this.$store.getters.getCurrentConnection" style="background-color: #4CAF50; color: white; padding: 20px; margin: 20px; width: 20%; border-left: 15px solid black"> 
+    {{"home" | translateTo(this.$store.getters.getCurrentLanguage)}}
+    </h1> 
     <Profile v-if="this.$store.getters.getCurrentConnection" name='profile'/>
     <div class="lorem" v-else>
         <p>Sociosqu rutrum neque auctor litora, iaculis a elementum consectetur congue amet tempus. Dis venenatis aliquet quisque non est est! Et fames vitae sed euismod at fusce inceptos vitae facilisis diam sit! Accumsan ridiculus conubia nostra non posuere lobortis aliquet tristique ultricies egestas. Himenaeos orci aliquet lacinia potenti dapibus neque pulvinar! Nec venenatis.
@@ -64,7 +66,7 @@ export default {
   }
 
   .lorem{
-    margin-right: 20%;
-    margin-left: 20%
+    margin: 20px;
+    width: 50%;
   }
 </style>

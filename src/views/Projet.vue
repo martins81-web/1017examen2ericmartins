@@ -1,7 +1,7 @@
 <template lang="html">
 
   <section class="projet">
-    <h1> {{"myProjects" | translateTo(lang)}}</h1>
+    <h1 style="background-color: #4CAF50; color: white; padding: 20px; margin: 20px; width: 20%; border-left: 15px solid black"> {{"myProjects" | translateTo(lang)}}</h1>
 
      <ul class='projets' id="projets">
      <!--Cycle for pour afficher les projets-->
@@ -56,5 +56,6 @@ export default {
   ul {
     list-style-type: none;
     padding: 0;
+    margin: 20px;
   }
 </style>
