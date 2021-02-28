@@ -17,6 +17,9 @@ et une page *projets* qui affiche une liste de projets.
 A footer fait partie du projet aussi. Le footer utilise un directive pour afficher le copyright et la date.
 Le nom est 'hardcodé'. Le footer contien aussi un lien vers la license du projet.
 
+L'utilité global du site/projet, un fois finalisé et ameilloré, est de montrer à des récruteurs un porfolio d'un développeur web - frontend, 
+dans le but ultime de trouver soit un stage, soit un emploi dans le domaine.
+
 
 ## Captures d'écran du projet
 
