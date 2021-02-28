@@ -24,3 +24,13 @@ Le nom est 'hardcodé'. Le footer contien aussi un lien vers la license du proje
 
 ![Connecté en anglais](https://i.imgur.com/vAt0mh5.jpg)
 
+## Arborecence du site web
+
+```mermaid
+graph LR
+A(Projet) --> B(Accueil)
+A(Projet) --> C(Projets)
+A(Projet) --> D(Contact)
+A(Projet) --> E(About)
+B(Accueil)-- Connecté --> F(Profil)
+B(Accueil)-- Déconnecté --> G{Lorem ipsum}
