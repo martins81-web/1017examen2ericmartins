@@ -2,7 +2,7 @@ export const mixinTranslations = {
 
     data () {
         return {
-           language: this.language
+           language: this.$store.getters.getCurrentLanguage
         }
       },
       //Traductions anglaises
@@ -11,7 +11,10 @@ export const mixinTranslations = {
       age: "Age",
       lastName: "Lastname",
       email: "Email",
+      login:"LOGIN",
+      logout:"LOGOUT",
       contact: "Contact",
+      copyright: "Copyright",
       reasonOfContact: "Reason of Contact",
       job: "Job information",
       informations: "Informations",
@@ -45,7 +48,10 @@ export const mixinTranslations = {
       age: "Age",
       lastName: "Nom",
       email: "Courriel",
+      login:"CONNEXION",
+      logout:"DÉCONNEXION",
       contact: "Contact",
+      copyright: "Droits d'auteur",
       reasonOfContact: "Raison du contact",
       job: "Emploi",
       informations: "Informations",

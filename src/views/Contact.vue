@@ -1,25 +1,25 @@
 <template lang="html">
 
   <section class="contact">
-    <h1>{{'contact' | translateTo(language)}}</h1>
+    <h1>{{'contact' | translateTo(lang)}}</h1>
     <form class="form">
       <div  class='item'>
-        <label> {{'lastName' | translateTo(language)}} </label>
+        <label> {{'lastName' | translateTo(lang)}} </label>
         <input type="text" name="lastname"  />
       </div>
       <div  class='item'>
-        <label>{{'firstName' | translateTo(language)}} </label>
+        <label>{{'firstName' | translateTo(lang)}} </label>
         <input type="text" name="firstname"  />
       </div>
       <div  class='item'>
-        <label>{{'email' | translateTo(language)}} </label>
+        <label>{{'email' | translateTo(lang)}} </label>
         <input type="text" name="email"  />
       </div>
       <div  class='item'>
-        <label>{{'reasonOfContact' | translateTo(language)}} </label>
+        <label>{{'reasonOfContact' | translateTo(lang)}} </label>
         <select class="sel" name="categorie" id="selectContactType">
         <!-- cycle for pour l'affichage des options dans le menu select -->
-            <option v-for="(option, i) in dropdownOptions" :key="i"> {{ option | translateTo(language) }}</option>
+            <option v-for="(option, i) in dropdownOptions" :key="i"> {{ option | translateTo(lang) }}</option>
         </select>
       </div>
     </form>
@@ -51,7 +51,9 @@ export default {
 
     },
     computed: {
-
+        lang () {
+            return this.$store.getters.getCurrentLanguage
+        }
     }
 }
 

@@ -1,19 +1,10 @@
 <template lang="html">
 
   <section class="accueil">
-     <!-- Button: SIMULATION LOGIN -->
-    <div style="display: flex; justify-content: flex-end; margin: 10px">
-      <button 
-        @click="showProfile=!showProfile" 
-        :style="showProfile ? 'background-color: crimson' :'background-color: #4CAF50'"
-        style="color:white; padding: 10px 20px"
-      >
-        {{showProfile ? 'LOGOUT' :'LOGIN'}}
-      </button>
-    </div>
+
   <!-- Utilisation du filtre translateTo(...) du mixinTranslations qui permets de traduire du texte -->
-    <h1 v-if="!showProfile"> {{"home" | translateTo(language)}}</h1>
-    <Profile v-if="showProfile" name='profile'/>
+    <h1 v-if="!this.$store.getters.getCurrentConnection"> {{"home" | translateTo(this.$store.getters.getCurrentLanguage)}}</h1>
+    <Profile v-if="this.$store.getters.getCurrentConnection" name='profile'/>
     <div class="lorem" v-else>
         <p>Sociosqu rutrum neque auctor litora, iaculis a elementum consectetur congue amet tempus. Dis venenatis aliquet quisque non est est! Et fames vitae sed euismod at fusce inceptos vitae facilisis diam sit! Accumsan ridiculus conubia nostra non posuere lobortis aliquet tristique ultricies egestas. Himenaeos orci aliquet lacinia potenti dapibus neque pulvinar! Nec venenatis.
       </p>
@@ -43,6 +34,9 @@ export default {
       return {
         showProfile: false,
       }
+    },
+    mounted(){
+       this.showProfile=this.$store.getters.getCurrentConnection;
     },
     methods: {
 

@@ -18,20 +18,18 @@
     props: [],
     data () {
       return {
-        nom: "Eric Martins"
+        nom: "Eric Martins",
       }
     },
     //directive bas de page
     directives: {
       mydirective: {
        bind: function(el) {
-         el.innerHTML = 'Copyright © ' + new Date().getFullYear() + el.innerHTML ;
+         el.innerHTML = 'Copyright © ' + new Date().getFullYear()  + el.innerHTML  ;
          el.style.color = 'white';
       },
     },
-    mounted () {
-
-    },
+    
     methods: {
 
     },

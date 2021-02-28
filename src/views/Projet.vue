@@ -1,12 +1,12 @@
 <template lang="html">
 
   <section class="projet">
-    <h1> {{"myProjects" | translateTo(language)}}</h1>
+    <h1> {{"myProjects" | translateTo(lang)}}</h1>
 
      <ul class='projets' id="projets">
      <!--Cycle for pour afficher les projets-->
         <li  v-for="(projet, i) in projets" :key="i"> 
-          <a :id="projet.name" :href="projet.link" target="_blank"> {{ projet.name | translateTo(language)}}</a> 
+          <a :id="projet.name" :href="projet.link" target="_blank"> {{ projet.name | translateTo(lang)}}</a> 
         </li>
     </ul>
   </section>
@@ -14,10 +14,8 @@
 </template>
 
 <script lang="js">
-import   {mixinTranslations}  from "../mixins/mixinTranslations";
 
 export default {
-    mixins: [mixinTranslations],
     name: 'projet',
     data() {
       return {
@@ -40,7 +38,9 @@ export default {
 
     },
     computed: {
-
+        lang () {
+            return this.$store.getters.getCurrentLanguage
+        }
     }
 }
 
