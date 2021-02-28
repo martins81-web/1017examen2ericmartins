@@ -27,12 +27,4 @@ Le nom est 'hardcodé'. Le footer contien aussi un lien vers la license du proje
 
 ## Arborecence du site web
 
-[Mermaid](https://mermaidjs.github.io/)
-```mermaid 
-graph LR
-A(Projet) --> B(Accueil)
-A(Projet) --> C(Projets)
-A(Projet) --> D(Contact)
-A(Projet) --> E(About)
-B(Accueil)-- Connecté --> F(Profil)
-B(Accueil)-- Déconnecté --> G{Lorem ipsum}
+![Arborescence](https://i.imgur.com/9XlpfAo.jpg)
