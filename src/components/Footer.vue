@@ -1,9 +1,11 @@
 <template lang="html">
   <section class="footer">
-  
-  <!-- Appel de la directive  -->
-    <div  v-mydirective> - {{nom}}  - 
-      <a href="https://raw.githubusercontent.com/martins81-web/1017examen2ericmartins/master/LICENSE" >LICENSE</a>
+   <!-- Appel de la directive  -->
+    <div  v-mydirective></div>
+    <div style="margin-left: 5px">
+      <a href="https://raw.githubusercontent.com/martins81-web/1017examen2ericmartins/master/LICENSE" >
+       {{'license' | translateTo(this.$store.getters.getCurrentLanguage)}}
+      </a>
     </div>
   </section>
 </template>
@@ -12,28 +14,31 @@
 
   export default  {
     name: 'footerComponent',
-    props: [],
+   props: [],
+    mounted () {
+
+    },
     data () {
       return {
-        nom: "Eric Martins",
+        nom: "Eric Martins"
       }
+    },
+    methods: {
+
+    },
+    computed: {
+     
     },
     //directive bas de page
     directives: {
       mydirective: {
        bind: function(el) {
-         el.innerHTML = 'Copyright © ' + new Date().getFullYear()  + el.innerHTML  ;
+         el.innerHTML = 'Copyright © ' + new Date().getFullYear() + " - Eric Martins"  ;
          el.style.color = 'white';
+        },
       },
     },
-    
-    methods: {
-
-    },
-    computed: {
-
-    }
-}
+  
 }
 
 
@@ -50,6 +55,7 @@
     color: white;
     text-align: center;
     padding: 20px;
+    
   }
   
   .a{

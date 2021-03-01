@@ -17,7 +17,8 @@ export default {
   name: 'App',
   data () {
       return {
-          loggedin: true
+          loggedin: true,
+          lang:'fr'
       }
     },
   components: {
@@ -28,7 +29,9 @@ export default {
   
     },
     methods: {
-  
+      languageChange (value) {
+          this.lang=value; // someValue
+        }
   }
   
 }

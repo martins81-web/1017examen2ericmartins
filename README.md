@@ -13,7 +13,28 @@ particulier, du cours Intégration d'interface utilisateur.
 Les besoins fonctionnels se trouve dans le ficher 
 [Besoins fonctionnels](https://github.com/martins81-web/1017examen2ericmartins/blob/master/BESOINS_FONCTIONNELS.md).
 
-## LICENSE
+## LICENCE
 
-La license se trouve dans le ficher
+La licence se trouve dans le ficher
 [License](https://github.com/martins81-web/1017examen2ericmartins/blob/master/LICENSE).
+
+
+## CAS DE TESTS
+
+Les fichiers excel des teste de trouve dans ce [répertoire](https://github.com/martins81-web/1017examen2ericmartins/blob/master/casdetest).
+
+### CAS DE TEST #1
+
+![Cas de test #1](https://i.imgur.com/eRlzvok.jpg)
+
+### CAS DE TEST #2
+
+![Cas de test #2](https://i.imgur.com/zY1LB0v.jpg)
+
+### CAS DE TEST #3
+
+![Cas de test #3](https://i.imgur.com/s5Cdtb3.jpg)
+
+### CAS DE TEST #4
+
+![Cas de test #4](https://i.imgur.com/eLvWosi.jpg)
