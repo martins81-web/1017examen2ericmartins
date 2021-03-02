@@ -9,6 +9,8 @@ import Projet from '../views/Projet.vue';
 Vue.use(VueRouter);
 
 const router = new VueRouter({
+  mode: 'history',
+  base: 'https://martins81-web.github.io/',
   routes : [
     { 
       path: '/', 
