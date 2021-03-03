@@ -31,22 +31,6 @@ La licence se trouve dans le ficher
 
 Les fichiers excel des cas de testes se trouvent dans ce [répertoire](https://github.com/martins81-web/1017examen2ericmartins/blob/master/casdetest).
 
-### CAS DE TEST #1
-
-![Cas de test #1](https://i.imgur.com/eRlzvok.jpg)
-
-### CAS DE TEST #2
-
-![Cas de test #2](https://i.imgur.com/zY1LB0v.jpg)
-
-### CAS DE TEST #3
-
-![Cas de test #3](https://i.imgur.com/s5Cdtb3.jpg)
-
-### CAS DE TEST #4
-
-![Cas de test #4](https://i.imgur.com/eLvWosi.jpg)
-
 
 ## DEPLOY
 

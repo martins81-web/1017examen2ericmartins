@@ -8,11 +8,12 @@ import Projet from '../views/Projet.vue';
 
 Vue.use(VueRouter);
 
-const router = new VueRouter({
-  routes : [
+const routes = [
+
     { 
       path: '/', 
-      redirect: '/home' 
+      name: 'home',
+      component: Accueil, 
     },
     {
       path: '/home',
@@ -45,9 +46,17 @@ const router = new VueRouter({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-    }
+    },
+    { path: '', redirectTo:'/accueil', pathMatch:'full' }, 
+    { path: '*', redirect: '/' },  
   ]
-})
+
+
+const router = new VueRouter({
+  mode: "history",
+  base: process.env.BASE_URL,
+  routes,
+});
 
 
 export default router
