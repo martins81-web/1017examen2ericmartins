@@ -4,23 +4,19 @@ import VueRouter from 'vue-router';
 import Accueil from '../views/Accueil.vue';
 import Contact from '../views/Contact.vue';
 import License from '../views/License.vue';
+import NotFound from '../views/NotFound.vue';
 import Projet from '../views/Projet.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
-
-    { 
-      path: '/', 
-      name: 'home',
-      component: Accueil, 
-    },
     {
       path: '/home',
       name: 'home',
       component: Accueil,
       props: true
     },
+    
     {
       path: '/projects',
       name: 'projects',
@@ -47,8 +43,21 @@ const routes = [
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
     },
-    { path: '', redirectTo:'/accueil', pathMatch:'full' }, 
-    { path: '*', redirect: '/' },  
+    {
+      path: "/NotFound",
+      name: "not-found",
+      component: NotFound,
+      props: true
+    },
+    { path: '*', redirect: '/NotFound' },  
+    {
+      path: "/",
+      redirect: "/home"
+    },
+    {
+      path: "",
+      redirect: "/home"
+    },
   ]
 
 
